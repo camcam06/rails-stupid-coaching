@@ -1,0 +1,11 @@
+<h1>Questions#answer</h1>
+<%=
+  @question = params[:question]
+  if @question == 'I am going to work right now!'
+        @answer = "You're question: #{@question}. Coach answer: Great!"
+    elsif @question.end_with?('?')
+      @answer = "You're question: #{@question}. Coach answer: Silly question, get dressed and go to work!"
+    else
+      @answer = "You're question: #{@question}. Coach answer: I don't care, get dressed and go to work!"
+    end %>
+<p>Find me in app/views/questions/answer.html.erb</p>
